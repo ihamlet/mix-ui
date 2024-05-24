@@ -1,0 +1,35 @@
+{
+  "name": "mix-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "vite --mode mock",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vue-hooks-plus/resolvers": "^1.2.4",
+    "ant-design-vue": "^4.2.1",
+    "echarts": "^5.5.0",
+    "less": "^4.2.0",
+    "mockjs": "^1.1.0",
+    "pinia": "^2.1.7",
+    "remixicon": "^4.2.0",
+    "sortablejs": "^1.15.2",
+    "vite-plugin-pages": "^0.32.1",
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vue": "^3.4.21",
+    "vue-draggable-next": "^2.2.1",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.2.0",
+    "vue-tsc": "^2.0.6"
+  }
+}
