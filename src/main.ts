@@ -1,6 +1,27 @@
+/*-- univer css --*/
+import '@univerjs/design/lib/index.css'
+import '@univerjs/ui/lib/index.css'
+import '@univerjs/docs-ui/lib/index.css'
+import '@univerjs/sheets-ui/lib/index.css'
+import '@univerjs/sheets-formula/lib/index.css'
+import '@univerjs/sheets-data-validation/lib/index.css'
+import '@univerjs/sheets-zen-editor/lib/index.css'
+import '@univerjs/find-replace/lib/index.css'
+import '@univerjs/sheets-conditional-formatting-ui/lib/index.css'
+import '@univerjs/sheets-zen-editor/lib/index.css'
+import '@univerjs/sheets-numfmt/lib/index.css'
+/*-- univer pro css --*/
+import '@univerjs-pro/collaboration-client/lib/index.css'
+import '@univerjs-pro/live-share/lib/index.css'
+import '@univerjs-pro/sheets-data-connector/lib/index.css'
+import '@univerjs-pro/sheets-print/lib/index.css'
+/*-- global css --*/
 import './style.less'
+/*-- antd css --*/
 import 'ant-design-vue/dist/reset.css'
+/*-- remixicon css --*/
 import 'remixicon/fonts/remixicon.css'
+/*-- app --*/
 import App from './App.vue'
 import Antd from 'ant-design-vue'
 import Router from './router'
