@@ -13,14 +13,7 @@ import { UniverSheetsPlugin, zhCN as SheetsZhCN } from '@univerjs/sheets'
 import { UniverSheetsFormulaPlugin } from '@univerjs/sheets-formula'
 import { UniverSheetsUIPlugin, zhCN as SheetsUIZhCN } from '@univerjs/sheets-ui'
 
-import { CollaborationPlugin } from '@univerjs-pro/collaboration'
-// import { CollaborationClientPlugin } from '@univerjs-pro/collaboration-client'
-// import { LiveSharePlugin } from '@univerjs-pro/live-share'
-// import { UniverSheetsDataConnectorPlugin } from '@univerjs-pro/sheets-data-connector'
-import { SheetsPrintPlugin } from '@univerjs-pro/sheets-print'
-import { UniverSheetsExchangeClientPlugin } from '@univerjs-pro/sheets-exchange-client'
-
-import { FUniver } from '@univerjs-pro/facade'
+import { FUniver } from '@univerjs/facade'
 
 import { UniverDataValidationPlugin } from '@univerjs/data-validation'
 import { UniverSheetsDataValidationPlugin, zhCN as SheetsDataValidationZhCN } from '@univerjs/sheets-data-validation'
@@ -30,15 +23,12 @@ import { UniverSheetsFindReplacePlugin } from '@univerjs/sheets-find-replace'
 import { UniverSheetsConditionalFormattingUIPlugin, zhCN as SheetsConditionalFormattingUIZhCN } from '@univerjs/sheets-conditional-formatting-ui'
 import { UniverSheetsZenEditorPlugin, zhCN as SheetsZenEditorZhCN } from '@univerjs/sheets-zen-editor'
 
-
-
 const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
     const univerAPI = ref()
     const univerRef = ref<Univer | null>(null)
     const workbook = ref<Workbook | null>(null)
     
     const init = () => {
-        if(univerRef.value) return
         const univer = new Univer({
             theme: defaultTheme,
             locale: LocaleType.ZH_CN,
@@ -63,9 +53,7 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         univer.registerPlugin(UniverRenderEnginePlugin)
         univer.registerPlugin(UniverFormulaEnginePlugin)
         
-        univer.registerPlugin(UniverUIPlugin, { 
-            container: container?.value 
-        })
+        univer.registerPlugin(UniverUIPlugin, { container: container?.value })
         
         univer.registerPlugin(UniverDocsPlugin, {
             hasScroll: false,
@@ -75,16 +63,6 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         univer.registerPlugin(UniverSheetsPlugin)
         univer.registerPlugin(UniverSheetsUIPlugin)
         univer.registerPlugin(UniverSheetsFormulaPlugin)
-        // collaboration plugins
-        univer.registerPlugin(CollaborationPlugin)
-        // univer.registerPlugin(CollaborationClientPlugin)
-        // univer.registerPlugin(LiveSharePlugin)
-        // // data connector
-        // univer.registerPlugin(UniverSheetsDataConnectorPlugin)
-        // print
-        univer.registerPlugin(SheetsPrintPlugin)
-        // exchange
-        univer.registerPlugin(UniverSheetsExchangeClientPlugin)
         
         /*-- 补充功能 --*/
         univer.registerPlugin(UniverDataValidationPlugin)
