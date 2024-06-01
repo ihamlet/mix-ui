@@ -15,6 +15,7 @@ declare global {
   const defineComponent: typeof import('vue')['defineComponent']
   const defineStore: typeof import('pinia')['defineStore']
   const effectScope: typeof import('vue')['effectScope']
+  const excelImport: typeof import('./utils/sheet')['excelImport']
   const filterEmptyValues: typeof import('./utils/index')['filterEmptyValues']
   const getActivePinia: typeof import('pinia')['getActivePinia']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
