@@ -13,14 +13,7 @@ import { UniverSheetsPlugin, zhCN as SheetsZhCN } from '@univerjs/sheets'
 import { UniverSheetsFormulaPlugin } from '@univerjs/sheets-formula'
 import { UniverSheetsUIPlugin, zhCN as SheetsUIZhCN } from '@univerjs/sheets-ui'
 
-import { CollaborationPlugin } from '@univerjs-pro/collaboration'
-// import { CollaborationClientPlugin } from '@univerjs-pro/collaboration-client'
-// import { LiveSharePlugin } from '@univerjs-pro/live-share'
-// import { UniverSheetsDataConnectorPlugin } from '@univerjs-pro/sheets-data-connector'
-import { SheetsPrintPlugin } from '@univerjs-pro/sheets-print'
-import { UniverSheetsExchangeClientPlugin } from '@univerjs-pro/sheets-exchange-client'
-
-import { FUniver } from '@univerjs-pro/facade'
+import { FUniver } from '@univerjs/facade'
 
 import { UniverDataValidationPlugin } from '@univerjs/data-validation'
 import { UniverSheetsDataValidationPlugin, zhCN as SheetsDataValidationZhCN } from '@univerjs/sheets-data-validation'
@@ -75,16 +68,6 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         univer.registerPlugin(UniverSheetsPlugin)
         univer.registerPlugin(UniverSheetsUIPlugin)
         univer.registerPlugin(UniverSheetsFormulaPlugin)
-        // collaboration plugins
-        univer.registerPlugin(CollaborationPlugin)
-        // univer.registerPlugin(CollaborationClientPlugin)
-        // univer.registerPlugin(LiveSharePlugin)
-        // // data connector
-        // univer.registerPlugin(UniverSheetsDataConnectorPlugin)
-        // print
-        univer.registerPlugin(SheetsPrintPlugin)
-        // exchange
-        univer.registerPlugin(UniverSheetsExchangeClientPlugin)
         
         /*-- 补充功能 --*/
         univer.registerPlugin(UniverDataValidationPlugin)
@@ -98,6 +81,8 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         workbook.value = univer.createUnit(UniverInstanceType.UNIVER_SHEET, {}) as Workbook
 
         univerAPI.value = FUniver.newAPI(univerRef.value as Univer)
+
+        console.log(univerAPI.value)
     }
 
     const destroyUniver = () => {

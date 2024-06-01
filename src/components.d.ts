@@ -24,7 +24,6 @@ declare module 'vue' {
     ARow: typeof import('ant-design-vue/es')['Row']
     ASpace: typeof import('ant-design-vue/es')['Space']
     ATable: typeof import('ant-design-vue/es')['Table']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     Page: typeof import('./components/Page.vue')['default']
     PageQueryTable: typeof import('./components/PageQueryTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

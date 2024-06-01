@@ -10,14 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@univerjs-pro/collaboration": "^0.1.12",
-    "@univerjs-pro/collaboration-client": "^0.1.12",
-    "@univerjs-pro/facade": "^0.1.12",
-    "@univerjs-pro/live-share": "^0.1.12",
-    "@univerjs-pro/print": "^0.1.12",
-    "@univerjs-pro/sheets-data-connector": "^0.1.10",
-    "@univerjs-pro/sheets-exchange-client": "^0.1.12",
-    "@univerjs-pro/sheets-print": "^0.1.12",
     "@univerjs/core": "^0.1.10",
     "@univerjs/data-validation": "^0.1.12",
     "@univerjs/design": "^0.1.12",
@@ -50,6 +42,7 @@
     "vite-plugin-vue-layouts": "^0.11.0",
     "vue": "^3.4.21",
     "vue-draggable-next": "^2.2.1",
+    "vue-hooks-plus": "^2.1.0",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
