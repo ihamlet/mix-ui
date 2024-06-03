@@ -76,6 +76,8 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         workbook.value = univer.createUnit(UniverInstanceType.UNIVER_SHEET, {}) as Workbook
 
         univerAPI.value = FUniver.newAPI(univerRef.value as Univer)
+
+        console.log(univerAPI.value)
     }
 
     const destroyUniver = () => {
@@ -91,13 +93,22 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         if (!workbook.value) {
             throw new Error('Workbook is not initialized')
         }
+
+        console.log(workbook.value.save())
         return workbook.value.save()
     }
     
+
+    const createExcel = (data: Object) => {
+        console.log(data)
+        univerRef.value && univerRef.value.createUnit(UniverInstanceType.UNIVER_SHEET, data) as Workbook
+    }
+
     return {
         univerRef,
         univerAPI,
         workbook,
+        createExcel,
         getData
     }
 }
