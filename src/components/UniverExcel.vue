@@ -25,6 +25,7 @@
     </a-modal>
 </template>
 <script lang="ts" setup>
+import type { Sheets } from './../utils/sheet'
 import type { UploadProps } from 'ant-design-vue'
 const router = useRouter()
 const univerExcelRef = ref()

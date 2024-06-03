@@ -32,7 +32,7 @@ const parseXLSXToUniverData = (data: string[][]): ICellData[][] => {
     })
 }
 
-type Sheets = Record<string, {
+export type Sheets = Record<string, {
     id: string
     name: string
     cellData: ICellData[][]

@@ -9,7 +9,7 @@ import { UniverUIPlugin, zhCN as UIZhCN } from '@univerjs/ui'
 import { UniverDocsPlugin } from '@univerjs/docs'
 import { UniverDocsUIPlugin, zhCN as DocsUIZhCN } from '@univerjs/docs-ui'
  
-import { UniverSheetsPlugin, SetRangeValuesCommand, zhCN as SheetsZhCN } from '@univerjs/sheets'
+import { UniverSheetsPlugin, zhCN as SheetsZhCN } from '@univerjs/sheets'
 import { UniverSheetsFormulaPlugin } from '@univerjs/sheets-formula'
 import { UniverSheetsUIPlugin, zhCN as SheetsUIZhCN } from '@univerjs/sheets-ui'
 
@@ -22,7 +22,6 @@ import { UniverFindReplacePlugin,  zhCN as FindReplaceZhCN } from '@univerjs/fin
 import { UniverSheetsFindReplacePlugin } from '@univerjs/sheets-find-replace'
 import { UniverSheetsConditionalFormattingUIPlugin, zhCN as SheetsConditionalFormattingUIZhCN } from '@univerjs/sheets-conditional-formatting-ui'
 import { UniverSheetsZenEditorPlugin, zhCN as SheetsZenEditorZhCN } from '@univerjs/sheets-zen-editor'
-
 const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
     const univerAPI = ref()
     const univerRef = ref<Univer | null>(null)
@@ -98,7 +97,7 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         return workbook.value.save()
     }
     
-    const createExcel = (data: string[][]) => {  
+    const createExcel = (data: Record<string, any>) => {  
         univerAPI.value.createUniverSheet(data)
     }
 
