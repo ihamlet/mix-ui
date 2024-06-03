@@ -48,7 +48,7 @@ export const excelImport = async (file: File) => {
             id: uuidv4(),
             name: sheetNames,
             rawData: XLSX.utils.sheet_to_json(
-                workbook.Sheets[sheetNames], {header: 1}
+                workbook.Sheets[sheetNames], { header: 1 }
             )
         }
     })

@@ -99,7 +99,7 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
     }
     
     const createExcel = (data: string[][]) => {  
-        univerRef.value && univerRef.value.createUnit(UniverInstanceType.UNIVER_SHEET, data) as Workbook
+        univerAPI.value.createUniverSheet(data)
     }
 
     return {
