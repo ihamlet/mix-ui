@@ -31,11 +31,18 @@ const parseXLSXToUniverData = (data: string[][]): ICellData[][] => {
         })
     })
 }
+
+type Sheets = Record<string, {
+    id: string
+    name: string
+    cellData: ICellData[][]
+}>
+
 export const excelImport = async (file: File) => {
     const fileData = await (await fetch(await fileToB64(file))).arrayBuffer()
     const workbook = await XLSX.read(fileData)
     console.log('--->', workbook)
-    let sheets:Record<string, any> = {}
+    let sheets:Sheets = {}
     const sheetData = workbook.SheetNames.map(sheetNames => {
         return {
             id: uuidv4(),
@@ -58,8 +65,7 @@ export const excelImport = async (file: File) => {
         id: uuidv4(),
         locale: 'zhCN',
         sheetOrder: sheetData.map(sheet => sheet.id),
-        sheets,
-        selections: ['A1']
+        sheets
     }
 
     console.log(excelData)
