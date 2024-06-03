@@ -1,4 +1,4 @@
-import { Univer, LocaleType, Tools, Workbook, UniverInstanceType } from '@univerjs/core'
+import { Univer, LocaleType, Tools, Workbook, UniverInstanceType, ICommandService, type ICellData } from '@univerjs/core'
 import { defaultTheme, zhCN as DesignZhCN  } from '@univerjs/design'
  
 import { UniverFormulaEnginePlugin } from '@univerjs/engine-formula'
@@ -9,7 +9,7 @@ import { UniverUIPlugin, zhCN as UIZhCN } from '@univerjs/ui'
 import { UniverDocsPlugin } from '@univerjs/docs'
 import { UniverDocsUIPlugin, zhCN as DocsUIZhCN } from '@univerjs/docs-ui'
  
-import { UniverSheetsPlugin, zhCN as SheetsZhCN } from '@univerjs/sheets'
+import { UniverSheetsPlugin, SetRangeValuesCommand, zhCN as SheetsZhCN } from '@univerjs/sheets'
 import { UniverSheetsFormulaPlugin } from '@univerjs/sheets-formula'
 import { UniverSheetsUIPlugin, zhCN as SheetsUIZhCN } from '@univerjs/sheets-ui'
 
@@ -98,9 +98,7 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         return workbook.value.save()
     }
     
-
-    const createExcel = (data: Object) => {
-        console.log(data)
+    const createExcel = (data: string[][]) => {  
         univerRef.value && univerRef.value.createUnit(UniverInstanceType.UNIVER_SHEET, data) as Workbook
     }
 

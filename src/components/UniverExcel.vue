@@ -12,13 +12,13 @@
         </template>
     </a-page-header>
     <div ref="univerExcelRef" style="height: calc(100vh - 41px)"></div>
-    <a-modal v-model:open="open" title="上传Excel" @ok="handleOk">
+    <a-modal v-model:open="open" title="导入Excel" @ok="handleOk">
         <a-upload-dragger
             :beforeUpload="beforeUpload"
             v-model:fileList="fileList">
             <a-space direction="vertical">
                 <i style="font-size:45px" class="ri-file-excel-2-line"></i>
-                <a-typography-text>点击或拖拽上传Excel文件</a-typography-text>
+                <a-typography-text>点击或拖拽导入Excel文件</a-typography-text>
                 <a-typography-text type="secondary">仅支持excel格式文件 .xls .xlsx .cvs</a-typography-text>
             </a-space>
         </a-upload-dragger>
