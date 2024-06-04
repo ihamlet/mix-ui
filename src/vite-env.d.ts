@@ -1,8 +1,7 @@
 /// <reference types="vite/client" />
 /// <reference types="vite-plugin-pages/client" />
 /// <reference types="vite-plugin-vue-layouts/client" />
-/// <reference types="@univerjs/vite-plugin/types" />
-declare module '@univerjs/data-validation'
+declare module 'x-data-spreadsheet/src/locale/zh-cn'
 declare module 'uuid'
 declare module 'sortablejs'
 declare module 'mockjs'

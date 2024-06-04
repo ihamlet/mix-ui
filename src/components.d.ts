@@ -27,10 +27,12 @@ declare module 'vue' {
     ATable: typeof import('ant-design-vue/es')['Table']
     ATypographyText: typeof import('ant-design-vue/es')['TypographyText']
     AUploadDragger: typeof import('ant-design-vue/es')['UploadDragger']
+    Excel: typeof import('./components/Excel.vue')['default']
     Page: typeof import('./components/Page.vue')['default']
     PageQueryTable: typeof import('./components/PageQueryTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SheetExcel: typeof import('./components/SheetExcel.vue')['default']
     TableSetting: typeof import('./components/TableSetting.vue')['default']
     UniverExcel: typeof import('./components/UniverExcel.vue')['default']
   }
