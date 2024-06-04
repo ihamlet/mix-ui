@@ -31,6 +31,7 @@ declare module 'vue' {
     PageQueryTable: typeof import('./components/PageQueryTable.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SheetExcel: typeof import('./components/SheetExcel.vue')['default']
     TableSetting: typeof import('./components/TableSetting.vue')['default']
     UniverExcel: typeof import('./components/UniverExcel.vue')['default']
   }

@@ -25,7 +25,6 @@
     </a-modal>
 </template>
 <script lang="ts" setup>
-import type { Sheets } from './../utils/sheet'
 import type { UploadProps } from 'ant-design-vue'
 const router = useRouter()
 const univerExcelRef = ref()
@@ -42,7 +41,7 @@ withDefaults(defineProps<{
     subTitle: '创建EXCEL表单'
 })
 
-const beforeUpload:UploadProps['beforeUpload'] = async (file) => {
+const beforeUpload:UploadProps['beforeUpload'] = async (file:File) => {
     const data = await excelImport(file)
     univerExcel.createExcel(data)
     return false

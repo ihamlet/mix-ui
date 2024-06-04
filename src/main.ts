@@ -9,6 +9,10 @@ import '@univerjs/sheets-zen-editor/lib/index.css'
 import '@univerjs/find-replace/lib/index.css'
 import '@univerjs/sheets-conditional-formatting-ui/lib/index.css'
 import '@univerjs/sheets-numfmt/lib/index.css'
+import '@univerjs/drawing-ui/lib/index.css'
+import '@univerjs/sheets-hyper-link-ui/lib/index.css'
+import '@univerjs/sheets-drawing-ui/lib/index.css'
+import '@univerjs/sheets-filter-ui/lib/index.css'
 /*-- global css --*/
 import './style.less'
 /*-- antd css --*/
