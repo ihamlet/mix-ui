@@ -62,7 +62,6 @@ export const excelImport = async (file: File) => {
     })
 
     const excelData = {
-        id: uuidv4(),
         locale: 'zhCN',
         sheetOrder: sheetData.map(sheet => sheet.id),
         sheets

@@ -128,7 +128,8 @@ const useUniverExcel = (container: Ref<string | HTMLElement | undefined>) => {
         return workbook.value.save()
     }
     
-    const createExcel = (data: Record<string, any>) => {  
+    const createExcel = (data: Record<string, any>) => {
+        console.log(workbook.value?.save())
         univerAPI.value.createUniverSheet(data)
     }
 
