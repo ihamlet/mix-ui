@@ -6,11 +6,15 @@ import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import { VueHooksPlusResolver } from '@vue-hooks-plus/resolvers'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import { univerPlugin } from '@univerjs/vite-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    univerPlugin({
+      css: false
+    }),
     Pages({
       dirs: [
         { dir: './src/pages', baseRoute: '' },
